@@ -14,9 +14,6 @@
         "php-cs-fixer/shim": "Shim version of PHP-CS-Fixer (recommended)"
     },
     "autoload": {
-        "files": [
-            "bootstrap.php"
-        ],
         "psr-4": {
             "PhpCsFixerCompat\\": "src/"
         }
