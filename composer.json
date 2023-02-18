@@ -1,0 +1,20 @@
+{
+    "name": "jreklund/php-cs-fixer-compat",
+    "description": "Compatibility layer for older rules that have changed",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Johan Eklund",
+            "email": "hello@johaneklund.com"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^3.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpCsFixerCompat\\": "src/"
+        }
+    }
+}
