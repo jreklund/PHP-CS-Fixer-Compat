@@ -7,6 +7,8 @@ declare(strict_types=1);
  *
  * (c) Johan Eklund <hello@johaneklund.com>
  *
+ * https://www.php-fig.org/psr/psr-4/examples/
+ *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  */
@@ -18,5 +20,9 @@ spl_autoload_register(function (string $class): void {
 
     $src = __DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR;
 
-    require $src . str_replace('\\', DIRECTORY_SEPARATOR, substr($class, 17)) . '.php';
+    $file = $src . str_replace('\\', DIRECTORY_SEPARATOR, substr($class, 17)) . '.php';
+
+    if (file_exists($file)) {
+        require $file;
+    }
 });
