@@ -9,8 +9,9 @@
             "email": "hello@johaneklund.com"
         }
     ],
-    "require": {
-        "friendsofphp/php-cs-fixer": "^3.14"
+    "suggest": {
+        "friendsofphp/php-cs-fixer": "A tool to automatically fix PHP Coding Standards",
+        "php-cs-fixer/shim": "Shim version of PHP-CS-Fixer (recommended)"
     },
     "autoload": {
         "psr-4": {
