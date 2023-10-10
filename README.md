@@ -1,7 +1,7 @@
 PHP Coding Standards Fixer Compat(ibility)
 ==========================
 
-Use older versions of rules in [PHP-CS-Fixer][0] v3.14.4 (or newer?).
+Use older versions of rules in [PHP-CS-Fixer][0] v3.34.1 (or newer?).
 
 ## Installation
 
@@ -31,8 +31,12 @@ return $config
         new PhpCsFixerCompat\Fixer\Basic\BracesFixer380(),
     ])
     ->setRules([
-        '@PSR12' => true,
-        'braces' => false,
+        '@PER' => true,
+        'control_structure_braces' => false,
+        'control_structure_continuation_position' => false,
+        'braces_position' => false,
+        'no_multiple_statements_per_line' => false,
+        'statement_indentation' => false,
         'PhpCsFixerCompat/braces_380' => true,
     ])
     ->setFinder(
