@@ -1,7 +1,7 @@
 PHP Coding Standards Fixer Compat(ibility)
 ==========================
 
-Use older versions of rules in [PHP-CS-Fixer][0] v3.34.1 (or newer?).
+Use older versions of rules in [PHP-CS-Fixer][0] v3.61.1 (or newer?).
 
 ## Installation
 

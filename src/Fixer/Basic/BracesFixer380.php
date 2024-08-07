@@ -16,6 +16,7 @@ namespace PhpCsFixerCompat\Fixer\Basic;
 
 use PhpCsFixer\AbstractProxyFixer;
 use PhpCsFixer\Fixer\ConfigurableFixerInterface;
+use PhpCsFixer\Fixer\ConfigurableFixerTrait;
 use PhpCsFixer\Fixer\ControlStructure\ControlStructureContinuationPositionFixer;
 use PhpCsFixer\Fixer\LanguageConstruct\DeclareParenthesesFixer;
 use PhpCsFixer\Fixer\WhitespacesAwareFixerInterface;
@@ -39,6 +40,8 @@ use PhpCsFixer\Tokenizer\TokensAnalyzer;
  */
 final class BracesFixer380 extends AbstractProxyFixer implements ConfigurableFixerInterface, WhitespacesAwareFixerInterface
 {
+	use ConfigurableFixerTrait;
+
     /**
      * @internal
      */
@@ -154,17 +157,6 @@ class Foo
     public function getPriority(): int
     {
         return 35;
-    }
-
-    public function configure(array $configuration = null): void
-    {
-        parent::configure($configuration);
-
-        $this->getControlStructureContinuationPositionFixer()->configure([
-            'position' => self::LINE_NEXT === $this->configuration['position_after_control_structures']
-                ? ControlStructureContinuationPositionFixer::NEXT_LINE
-                : ControlStructureContinuationPositionFixer::SAME_LINE,
-        ]);
     }
 
     /**
